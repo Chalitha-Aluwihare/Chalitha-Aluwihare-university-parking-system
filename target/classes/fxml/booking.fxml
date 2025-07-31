@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.universityparkingsystem.controller.bookingController">
+   <children>
+      <!-- Background Image -->
+      <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/BookingBG.png" />
+         </image>
+      </ImageView>
+
+      <!-- Container Pane for inputs to align better -->
+      <VBox layoutX="300" layoutY="200" spacing="20" prefWidth="420" style="-fx-background-color: rgba(0,0,0,0.5); -fx-padding: 30px; -fx-background-radius: 10;">
+         <children>
+            <!-- Slot Number -->
+            <Label text="Slot Number:" style="-fx-text-fill: white; -fx-font-size: 18px;" />
+            <TextField fx:id="slotNoField" promptText="Slot Number"
+                       style="-fx-border-color: #ffc600; -fx-background-radius: 5; -fx-background-color: white; -fx-border-radius: 5; -fx-font-size: 18px;" />
+
+            <!-- License Plate -->
+            <Label text="License Plate:" style="-fx-text-fill: white; -fx-font-size: 18px;" />
+            <TextField fx:id="licensePlateField" promptText="Enter License Plate"
+                       style="-fx-border-color: #ffc600; -fx-background-radius: 5; -fx-background-color: white; -fx-border-radius: 5; -fx-font-size: 18px;" />
+
+            <!-- Booking Duration Label -->
+            <Label text="Booking Duration:" style="-fx-text-fill: white; -fx-font-size: 18px;" />
+
+            <!-- Duration input: Hours and Minutes -->
+            <HBox spacing="10">
+               <children>
+                  <VBox>
+                     <Label text="Hours" style="-fx-text-fill: white; -fx-font-size: 16px;" />
+                     <TextField fx:id="hoursField" promptText="Hours"
+                                style="-fx-border-color: #ffc600; -fx-background-radius: 5; -fx-background-color: white; -fx-border-radius: 5; -fx-font-size: 18px;"
+                                prefWidth="150" />
+                  </VBox>
+                  <VBox>
+                     <Label text="Minutes" style="-fx-text-fill: white; -fx-font-size: 16px;" />
+                     <TextField fx:id="minutesField" promptText="Minutes"
+                                style="-fx-border-color: #ffc600; -fx-background-radius: 5; -fx-background-color: white; -fx-border-radius: 5; -fx-font-size: 18px;"
+                                prefWidth="150" />
+                  </VBox>
+               </children>
+            </HBox>
+
+            <!-- Buttons -->
+            <Button fx:id="confirmButton" mnemonicParsing="false"
+                    style="-fx-background-color: #ffc600; -fx-background-radius: 5; -fx-font-size: 20px; -fx-font-weight: bold;"
+                    text="Confirm Booking" onAction="#handleConfirmBooking" prefHeight="44" prefWidth="420" />
+
+            <Button fx:id="backButton" mnemonicParsing="false"
+                    style="-fx-background-color: #b0b0b0; -fx-background-radius: 5; -fx-font-size: 20px; -fx-font-weight: bold;"
+                    text="Back" onAction="#handleBack" prefHeight="44" prefWidth="420" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

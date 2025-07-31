@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="com.example.universityparkingsystem.controller.welcome"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="768.0" prefWidth="1024.0">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/WelcomeBG.png" />
+         </image>
+      </ImageView>
+
+      <Button fx:id="getStartedBtn"
+              layoutX="400.0" layoutY="522.0"
+              mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0"
+              style="-fx-background-color: ffd800; -fx-background-radius: 50;"
+              text="Get Started" textAlignment="CENTER"
+              onAction="#handleGetStarted">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

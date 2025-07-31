@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.universityparkingsystem.controller.parkingLot02">
+      <children>
+            <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                        <Image url="@../images/ParkingSlotBG02.png" />
+                  </image>
+            </ImageView>
+
+            <!-- Countdown and Slot Buttons with Labels -->
+            <Label fx:id="countdown0" layoutX="464.0" layoutY="186.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn0" layoutX="544.0" layoutY="186.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 01" textFill="WHITE"/>
+
+            <Label fx:id="countdown1" layoutX="464.0" layoutY="237.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn1" layoutX="544.0" layoutY="237.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 02" textFill="WHITE"/>
+
+            <Label fx:id="countdown2" layoutX="464.0" layoutY="286.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn2" layoutX="544.0" layoutY="286.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 03" textFill="WHITE"/>
+
+            <Label fx:id="countdown3" layoutX="464.0" layoutY="338.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn3" layoutX="544.0" layoutY="338.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 04" textFill="WHITE"/>
+
+            <Label fx:id="countdown4" layoutX="464.0" layoutY="390.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn4" layoutX="544.0" layoutY="390.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 05" textFill="WHITE"/>
+
+            <Label fx:id="countdown5" layoutX="464.0" layoutY="443.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn5" layoutX="544.0" layoutY="443.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 06" textFill="WHITE"/>
+
+            <Label fx:id="countdown6" layoutX="464.0" layoutY="493.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn6" layoutX="544.0" layoutY="493.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 07" textFill="WHITE"/>
+
+            <Label fx:id="countdown7" layoutX="464.0" layoutY="546.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn7" layoutX="544.0" layoutY="546.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 08" textFill="WHITE"/>
+
+            <Label fx:id="countdown8" layoutX="464.0" layoutY="602.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn8" layoutX="544.0" layoutY="602.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 09" textFill="WHITE"/>
+
+            <Label fx:id="countdown9" layoutX="464.0" layoutY="661.0" prefHeight="38.0" prefWidth="70.0"
+                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
+            <Button fx:id="slotBtn9" layoutX="544.0" layoutY="661.0" prefHeight="38.0" prefWidth="174.0"
+                    text="Slot No. 10" textFill="WHITE"/>
+      </children>
+</AnchorPane>
