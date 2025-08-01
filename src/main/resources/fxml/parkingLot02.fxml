@@ -1,70 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.universityparkingsystem.controller.parkingLot02">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.universityparkingsystem.controller.parkingLot02">
       <children>
-            <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                        <Image url="@../images/ParkingSlotBG02.png" />
-                  </image>
-            </ImageView>
+            <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #000000;">
+                  <children>
+                        <ImageView fitHeight="768.0" fitWidth="1024.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+                              <image>
+                                    <Image url="@../images/ParkingSlotBG02.png" />
+                              </image>
+                        </ImageView>
+                        <Label layoutX="56.0" layoutY="97.0" text="University Parking System" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="1.0" />
+                              </font>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="146.0" text="Parking Lot 02" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="1.0" />
+                              </font>
+                        </Label>
+                        <Button fx:id="homeButton" layoutX="903.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Home" textFill="BLACK">
+                              <font>
+                                    <Font name="System Bold" size="20.0" />
+                              </font>
+                        </Button>
+                        <Button fx:id="backButton" layoutX="783.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #0d285a; -fx-background-radius: 50;" text="Back" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="20.0" />
+                              </font>
+                        </Button>
+                        <Button fx:id="slotA1" layoutX="380.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="A1" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerA1" layoutX="398.0" layoutY="367.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <!-- Countdown and Slot Buttons with Labels -->
-            <Label fx:id="countdown0" layoutX="464.0" layoutY="186.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn0" layoutX="544.0" layoutY="186.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 01" textFill="WHITE"/>
+                        <Button fx:id="slotA2" layoutX="510.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="A2" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerA2" layoutX="531.0" layoutY="365.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown1" layoutX="464.0" layoutY="237.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn1" layoutX="544.0" layoutY="237.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 02" textFill="WHITE"/>
+                        <Button fx:id="slotA3" layoutX="640.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="A3" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerA3" layoutX="660.0" layoutY="366.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown2" layoutX="464.0" layoutY="286.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn2" layoutX="544.0" layoutY="286.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 03" textFill="WHITE"/>
+                        <Button fx:id="slotA4" layoutX="770.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="A4" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerA4" layoutX="790.0" layoutY="366.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown3" layoutX="464.0" layoutY="338.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn3" layoutX="544.0" layoutY="338.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 04" textFill="WHITE"/>
+                        <Button fx:id="slotB1" layoutX="381.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="B1" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerB1" layoutX="399.0" layoutY="491.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown4" layoutX="464.0" layoutY="390.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn4" layoutX="544.0" layoutY="390.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 05" textFill="WHITE"/>
+                        <Button fx:id="slotB2" layoutX="511.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="B2" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerB2" layoutX="533.0" layoutY="491.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown5" layoutX="464.0" layoutY="443.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn5" layoutX="544.0" layoutY="443.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 06" textFill="WHITE"/>
+                        <Button fx:id="slotB3" layoutX="641.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="B3" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerB3" layoutX="660.0" layoutY="491.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown6" layoutX="464.0" layoutY="493.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn6" layoutX="544.0" layoutY="493.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 07" textFill="WHITE"/>
+                        <Button fx:id="slotB4" layoutX="771.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="B4" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerB4" layoutX="796.0" layoutY="491.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown7" layoutX="464.0" layoutY="546.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn7" layoutX="544.0" layoutY="546.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 08" textFill="WHITE"/>
+                        <Button fx:id="slotC1" layoutX="382.0" layoutY="576.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="C1" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerC1" layoutX="404.0" layoutY="623.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown8" layoutX="464.0" layoutY="602.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn8" layoutX="544.0" layoutY="602.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 09" textFill="WHITE"/>
+                        <Button fx:id="slotC2" layoutX="512.0" layoutY="576.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="C2" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerC2" layoutX="533.0" layoutY="623.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
 
-            <Label fx:id="countdown9" layoutX="464.0" layoutY="661.0" prefHeight="38.0" prefWidth="70.0"
-                   text="00:00" textFill="BLACK" style="-fx-font-size: 14px;"/>
-            <Button fx:id="slotBtn9" layoutX="544.0" layoutY="661.0" prefHeight="38.0" prefWidth="174.0"
-                    text="Slot No. 10" textFill="WHITE"/>
+                        <Button fx:id="slotC3" layoutX="642.0" layoutY="576.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="C3" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerC3" layoutX="663.0" layoutY="623.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+
+                        <Button fx:id="slotC4" layoutX="772.0" layoutY="576.0" mnemonicParsing="false" onAction="#handleSlotClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="C4" textFill="WHITE">
+                              <font>
+                                    <Font name="System Bold" size="15.0" />
+                              </font>
+                        </Button>
+                        <Label fx:id="timerC4" layoutX="792.0" layoutY="623.0" prefHeight="19.0" prefWidth="61.0" text="00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  </children>
+            </Pane>
       </children>
 </AnchorPane>

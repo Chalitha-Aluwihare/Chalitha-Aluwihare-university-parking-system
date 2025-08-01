@@ -4,28 +4,35 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:controller="com.example.universityparkingsystem.controller.welcome"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            prefHeight="768.0" prefWidth="1024.0">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.universityparkingsystem.controller.welcome">
    <children>
-      <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/WelcomeBG.png" />
-         </image>
-      </ImageView>
-
-      <Button fx:id="getStartedBtn"
-              layoutX="400.0" layoutY="522.0"
-              mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0"
-              style="-fx-background-color: ffd800; -fx-background-radius: 50;"
-              text="Get Started" textAlignment="CENTER"
-              onAction="#handleGetStarted">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
+      <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1024.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/WelcomeBG.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="lot01Button" layoutX="400.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleLot01Button" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Parking Lot 01" textFill="BLACK">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="lot02Button" layoutX="400.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleLot02Button" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Parking Lot 02" textFill="BLACK">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="281.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University Parking System" wrappingWidth="500.0">
+               <font>
+                  <Font name="System Bold" size="1.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

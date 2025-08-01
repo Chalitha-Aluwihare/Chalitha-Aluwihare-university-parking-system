@@ -29,7 +29,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class parkingLot02 implements Initializable {
+public class parkingLot01 implements Initializable {
 
     @FXML
     private Button slotA1, slotA2, slotA3, slotA4,
@@ -41,7 +41,7 @@ public class parkingLot02 implements Initializable {
             timerB1, timerB2, timerB3, timerB4,
             timerC1, timerC2, timerC3, timerC4;
 
-    private final String parkingLotName = "Lot02";
+    private final String parkingLotName = "Lot01";
     private Map<String, Button> slotButtons = new HashMap<>();
     private Map<String, Label> slotTimers = new HashMap<>();
     private ScheduledExecutorService scheduler;
