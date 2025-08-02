@@ -21,16 +21,18 @@ public class Slot {
         }
     }
 
-    // New method for booking with a specific start time
+    /**
+     * Books the slot for a given duration, license plate, and start time.
+     * @param durationMinutes The total booking duration in minutes.
+     * @param licensePlate The license plate of the vehicle.
+     * @param startTime The start time of the booking.
+     */
     public void bookSlot(int durationMinutes, String licensePlate, LocalDateTime startTime) {
-        // Only set available to false if the booking starts now. Otherwise, it's a pre-booking.
-        if (startTime.isBefore(LocalDateTime.now().plusMinutes(1))) {
-            this.available = false;
-        }
-
+        this.available = false;
         this.remainingMinutes = durationMinutes;
         this.bookingEndTime = startTime.plusMinutes(durationMinutes);
 
+        // Create a new Booking object
         Booking booking = new Booking(
                 slotNo,
                 parkingLot,
@@ -39,35 +41,22 @@ public class Slot {
                 startTime
         );
 
+        // Update the database with the new booking and slot status
         Database.createBooking(booking);
         Database.updateSlot(this);
     }
 
-    // Existing method for immediate booking
-    public void bookSlot(int durationMinutes, String licensePlate) {
-        this.bookSlot(durationMinutes, licensePlate, LocalDateTime.now());
-    }
-
+    /**
+     * Calculates the remaining booking time in seconds.
+     * @return The number of seconds left, or 0 if no booking exists.
+     */
     public long getRemainingSeconds() {
         if (bookingEndTime == null) return 0;
         long secondsLeft = Duration.between(LocalDateTime.now(), bookingEndTime).getSeconds();
         return Math.max(secondsLeft, 0);
     }
 
-    public long getRemainingSecondsToStart() {
-        Booking booking = Database.getBookingBySlot(this.slotNo, this.parkingLot);
-        if (booking != null && booking.getStartTime().isAfter(LocalDateTime.now())) {
-            long secondsLeft = Duration.between(LocalDateTime.now(), booking.getStartTime()).getSeconds();
-            return Math.max(secondsLeft, 0);
-        }
-        return 0;
-    }
-
-    public boolean isPreBooked() {
-        Booking booking = Database.getBookingBySlot(this.slotNo, this.parkingLot);
-        return booking != null && booking.getStartTime().isAfter(LocalDateTime.now());
-    }
-
+    // Getters
     public String getSlotNo() {
         return slotNo;
     }
@@ -84,18 +73,20 @@ public class Slot {
         return parkingLot;
     }
 
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
-    public void setRemainingMinutes(int minutes) {
-        this.remainingMinutes = minutes;
-    }
-
     public LocalDateTime getBookingEndTime() {
         return bookingEndTime;
     }
 
+    // Setters
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    /**
+     * Sets the booking end time for the slot.
+     * This method was missing and caused the compilation error in Database.java.
+     * @param bookingEndTime The new booking end time.
+     */
     public void setBookingEndTime(LocalDateTime bookingEndTime) {
         this.bookingEndTime = bookingEndTime;
     }

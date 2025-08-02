@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -24,67 +23,46 @@
                   <Font name="System Bold" size="1.0" />
                </font>
             </Label>
-            <TextField fx:id="slotNoField" alignment="CENTER" layoutX="309.0" layoutY="256.0" prefHeight="50.0" prefWidth="199.0">
+            <TextField fx:id="slotNoField" alignment="CENTER" editable="false" layoutX="380.0" layoutY="250.0" prefHeight="50.0" prefWidth="266.0">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <TextField fx:id="licensePlateField" alignment="CENTER" layoutX="542.0" layoutY="250.0" prefHeight="50.0" prefWidth="266.0" promptText="License Plate No.">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </TextField>
-            <Label alignment="CENTER" layoutX="660.0" layoutY="621.0" prefHeight="40.0" prefWidth="268.0" text="Booking Duration" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="363.0" layoutY="211.0" prefHeight="40.0" prefWidth="298.0" text="Parking Slot Booking" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="hoursField" alignment="CENTER" layoutX="309.0" layoutY="347.0" prefHeight="50.0" prefWidth="120.0" promptText="Hours">
+            <TextField fx:id="licensePlateField" alignment="CENTER" layoutX="380.0" layoutY="311.0" prefHeight="50.0" prefWidth="266.0" promptText="License Plate No.">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <TextField fx:id="minutesField" alignment="CENTER" layoutX="449.0" layoutY="347.0" prefHeight="50.0" prefWidth="120.0" promptText="Minutes">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </TextField>
-            <Label alignment="CENTER" layoutX="307.0" layoutY="409.0" prefHeight="40.0" prefWidth="207.0" text="Optional Pre-booking Time">
+            <Label alignment="CENTER" layoutX="312.0" layoutY="372.0" prefHeight="40.0" prefWidth="211.0" text="Add Parking Duration" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="datePicker" layoutX="309.0" layoutY="449.0" prefHeight="50.0" prefWidth="209.0" promptText="Date" />
-            <TextField fx:id="timeField" alignment="CENTER" layoutX="546.0" layoutY="450.0" prefHeight="50.0" prefWidth="170.0" promptText="Time (HH:MM)">
+            <TextField fx:id="hoursField" layoutX="380.0" layoutY="410.0" prefHeight="50.0" prefWidth="120.0" promptText="Hours">
                <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="confirmButton" layoutX="311.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleConfirmBooking" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Confirm Booking" textFill="BLACK">
+            <TextField fx:id="minutesField" layoutX="526.0" layoutY="410.0" prefHeight="50.0" prefWidth="120.0" promptText="Minutes">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Button fx:id="confirmButton" layoutX="268.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleConfirmBooking" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Confirm Booking" textFill="BLACK">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="backButton" layoutX="570.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Back" textFill="BLACK">
+            <Button fx:id="backButton" layoutX="527.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="243.0" style="-fx-background-color: #ffd800; -fx-background-radius: 50;" text="Back" textFill="BLACK">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" layoutX="312.0" layoutY="307.0" prefHeight="40.0" prefWidth="211.0" text="Add Booking Time Duration">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="309.0" layoutY="215.0" prefHeight="40.0" prefWidth="160.0" text="Parking Slot Number">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="541.0" layoutY="209.0" prefHeight="40.0" prefWidth="170.0" text="License Plate Number">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
          </children>
       </Pane>
    </children>
