@@ -21,12 +21,7 @@ public class Slot {
         }
     }
 
-    /**
-     * Books the slot for a given duration, license plate, and start time.
-     * @param durationMinutes The total booking duration in minutes.
-     * @param licensePlate The license plate of the vehicle.
-     * @param startTime The start time of the booking.
-     */
+
     public void bookSlot(int durationMinutes, String licensePlate, LocalDateTime startTime) {
         this.available = false;
         this.remainingMinutes = durationMinutes;
@@ -46,10 +41,7 @@ public class Slot {
         Database.updateSlot(this);
     }
 
-    /**
-     * Calculates the remaining booking time in seconds.
-     * @return The number of seconds left, or 0 if no booking exists.
-     */
+
     public long getRemainingSeconds() {
         if (bookingEndTime == null) return 0;
         long secondsLeft = Duration.between(LocalDateTime.now(), bookingEndTime).getSeconds();
@@ -82,11 +74,7 @@ public class Slot {
         this.available = available;
     }
 
-    /**
-     * Sets the booking end time for the slot.
-     * This method was missing and caused the compilation error in Database.java.
-     * @param bookingEndTime The new booking end time.
-     */
+
     public void setBookingEndTime(LocalDateTime bookingEndTime) {
         this.bookingEndTime = bookingEndTime;
     }

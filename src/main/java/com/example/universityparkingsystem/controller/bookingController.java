@@ -26,11 +26,7 @@ public class bookingController {
     private String slotNo;
     private String parkingLot;
 
-    /**
-     * Sets the slot and parking lot data passed from the parking lot screens.
-     * @param slotNo The number of the selected slot.
-     * @param parkingLot The name of the parking lot.
-     */
+
     public void setSlotData(String slotNo, String parkingLot) {
         this.slotNo = slotNo;
         this.parkingLot = parkingLot;
@@ -40,10 +36,7 @@ public class bookingController {
         }
     }
 
-    /**
-     * Handles the booking confirmation process.
-     * It now uses the pre-filled slot data and user-entered duration.
-     */
+
     @FXML
     private void handleConfirmBooking() {
         try {
@@ -88,9 +81,7 @@ public class bookingController {
         }
     }
 
-    /**
-     * Navigates back to the appropriate parking lot screen.
-     */
+
     private void navigateToParkingLot() {
         try {
             String fxmlPath = "/fxml/" + (parkingLot.equals("Lot01") ? "parkingLot01.fxml" : "parkingLot02.fxml");
@@ -104,19 +95,13 @@ public class bookingController {
         }
     }
 
-    /**
-     * Handles the back button action.
-     */
+
     @FXML
     private void handleBack() {
         navigateToParkingLot();
     }
 
-    /**
-     * Displays a simple alert dialog.
-     * @param title The title of the alert.
-     * @param message The message content.
-     */
+
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);

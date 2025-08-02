@@ -66,10 +66,7 @@ public class parkingLot02 implements Initializable {
         }.start();
     }
 
-    /**
-     * Fetches the latest slot data from the database and updates the UI.
-     * This method also sets the color of the slots based on availability.
-     */
+
     private void updateSlots() {
         List<Slot> slots = Database.getSlots(parkingLotName);
         Platform.runLater(() -> {
@@ -88,9 +85,7 @@ public class parkingLot02 implements Initializable {
         });
     }
 
-    /**
-     * Updates the remaining time labels for booked slots.
-     */
+
     private void updateTimers() {
         List<Slot> slots = Database.getSlots(parkingLotName);
         for (Slot slot : slots) {
@@ -117,10 +112,7 @@ public class parkingLot02 implements Initializable {
         }
     }
 
-    /**
-     * Handles clicks on any of the slot buttons.
-     * This now navigates to the booking screen and passes the selected slot's data.
-     */
+
     @FXML
     private void handleSlotClick(ActionEvent event) {
         String slotNo = ((Button) event.getSource()).getId().replace("slot", "");

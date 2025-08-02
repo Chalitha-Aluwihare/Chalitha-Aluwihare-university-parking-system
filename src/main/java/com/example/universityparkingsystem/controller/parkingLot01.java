@@ -39,7 +39,7 @@ public class parkingLot01 implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Initialize maps for easy access to FXML elements
+
         slotButtons.put("A1", slotA1); slotTimers.put("A1", timerA1);
         slotButtons.put("A2", slotA2); slotTimers.put("A2", timerA2);
         slotButtons.put("A3", slotA3); slotTimers.put("A3", timerA3);
@@ -53,11 +53,11 @@ public class parkingLot01 implements Initializable {
         slotButtons.put("C3", slotC3); slotTimers.put("C3", timerC3);
         slotButtons.put("C4", slotC4); slotTimers.put("C4", timerC4);
 
-        // Periodically check and update the slot status from the database
+
         scheduler = Executors.newSingleThreadScheduledExecutor();
         scheduler.scheduleAtFixedRate(this::updateSlots, 0, 5, TimeUnit.SECONDS);
 
-        // Update timers every second
+
         new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -66,10 +66,6 @@ public class parkingLot01 implements Initializable {
         }.start();
     }
 
-    /**
-     * Fetches the latest slot data from the database and updates the UI.
-     * This method also sets the color of the slots based on availability.
-     */
     private void updateSlots() {
         List<Slot> slots = Database.getSlots(parkingLotName);
         Platform.runLater(() -> {
@@ -88,9 +84,7 @@ public class parkingLot01 implements Initializable {
         });
     }
 
-    /**
-     * Updates the remaining time labels for booked slots.
-     */
+
     private void updateTimers() {
         List<Slot> slots = Database.getSlots(parkingLotName);
         for (Slot slot : slots) {
@@ -117,10 +111,6 @@ public class parkingLot01 implements Initializable {
         }
     }
 
-    /**
-     * Handles clicks on any of the slot buttons.
-     * This now navigates to the booking screen and passes the selected slot's data.
-     */
     @FXML
     private void handleSlotClick(ActionEvent event) {
         String slotNo = ((Button) event.getSource()).getId().replace("slot", "");
@@ -141,9 +131,7 @@ public class parkingLot01 implements Initializable {
         }
     }
 
-    /**
-     * Navigates back to the welcome screen.
-     */
+
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
         cleanupScheduler();
@@ -156,9 +144,7 @@ public class parkingLot01 implements Initializable {
         stage.show();
     }
 
-    /**
-     * Navigates to the home (welcome) screen.
-     */
+
     @FXML
     private void handleHome(ActionEvent event) throws IOException {
         cleanupScheduler();
@@ -171,20 +157,12 @@ public class parkingLot01 implements Initializable {
         stage.show();
     }
 
-    /**
-     * Stops the background scheduler to prevent resource leaks.
-     */
     private void cleanupScheduler() {
         if (scheduler != null && !scheduler.isShutdown()) {
             scheduler.shutdownNow();
         }
     }
 
-    /**
-     * Displays a simple alert dialog.
-     * @param title The title of the alert.
-     * @param message The message content.
-     */
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
